@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>EAD STORE</title>
+        <title>EAD HOTEL</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">    
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
     </head>
     <body>
-         <header>
-            <ul class="nav justify-content-center" style="background-color: blue;">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Booking.php">Booking</a>
-                </li>
-            </ul>
+        <header>
+          <ul class="nav justify-content-center" style="background-color: blue;">
+            <li class="nav-item">
+              <a class="nav-link active" href="Home.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Booking.php">Booking</a>
+            </li>
+          </ul>
         </header>
         <br>
-        <p class="text-center">EAD HOTEL<p>
-        <p class="text-center">Welcome to 5 Star Hotel<p>
+        <h2 class="text-center" style="color: DodgerBlue;">EAD HOTEL</h2>
+        <h3 class="text-center" style="color: DodgerBlue;">Welcome to 5 Star Hotel</h3>
         <div class="container mt-5" style="margin-top:30px;">
-        <div class="card-deck">
+        <div class="card-columns">
 
-          <div class="card text-center" style="width: 15rem;" >
-          <img class="card-img-top" src="standar.jpg" alt="Card image cap" style="height: 12rem;">
+          <div class="col-lg-10">
+          <div class="card text-center" >
+          
+          <img class="card-img-top" src="standar.jpg" alt="Card image cap" style="height: 15rem;">
           <div class="card-body">
             <h5 class="card-title">Standard</h5>
+            <h5 style="color: DodgerBlue" class="card-text">$ 90/Day</h5>
             <br>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Facilities</li>
@@ -37,14 +39,21 @@
           </div>
           <div class="card-footer">
           <div class="row justify-content-center">
-            <a href="Booking.php" class="btn btn-primary">Book Now</a>
+            <form action="Booking.php" method="get">
+            <button type="submit" name="book" value="standard" class="btn btn-primary">Book now</button>
+            </form>
+
+          </div>
           </div>
           </div>
         </div>
+        <div class="col-lg-10">
         <div class="card text-center">
-          <img class="card-img-top" src="luxury.jpg" alt="Card image cap" style="height: 12rem;">
+        
+          <img class="card-img-top" src="luxury.jpg" alt="Card image cap" style="height: 15rem;">
           <div class="card-body">
           <h5 class="card-title">Superior</h5>
+          <h5 style="color: DodgerBlue" class="card-text">$ 130/Day</h5>
           <br>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Facilities</li>
@@ -55,14 +64,21 @@
           </div>
           <div class="card-footer">
           <div class="row justify-content-center">
-            <a href="Booking.php" class="btn btn-primary">Book Now</a>
+            <form action="Booking.php" method="get">
+            <button type="submit" name="book" value="superior" class="btn btn-primary">Book now </button>
+            </form>
+
           </div>
           </div>
         </div>
+        </div>
+        <div class="col-lg-10">
         <div class="card text-center">
-          <img class="card-img-top" src="superior.jpg" alt="Card image cap" style="height: 12rem;">
+        
+          <img class="card-img-top" src="superior.jpg" alt="Card image cap" style="height: 15rem;">
           <div class="card-body">
           <h5 class="card-title">Luxury</h5>
+          <h5 style="color: DodgerBlue" class="card-text">$ 90/Day</h5>
           <br>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Facilities</li>
@@ -75,9 +91,13 @@
           </div>
           <div class="card-footer ">
           <div class="row justify-content-center">
-            <a href="Booking.php" class="btn btn-primary">Book Now</a>
+            <form action="Booking.php" method="get">
+            <button type="submit" name="book" value="luxury" class="btn btn-primary">Book now</button>
+            </form>
+
           </div>
           </div>
+        </div>
         </div>
 
         </div>

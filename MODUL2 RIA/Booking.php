@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>EAD STORE</title>
+        <title>EAD HOTEL</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">    
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
     </head>
     <body>
-         <header>
+        <header>
             <ul class="nav justify-content-center" style="background-color: blue;">
                 <li class="nav-item">
                     <a class="nav-link active" href="Home.php">Home</a>
-                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Booking</a>
+                    <a class="nav-link" href="Booking.php">Booking</a>
                 </li>
             </ul>
         </header>
@@ -61,13 +60,13 @@
         
                 <div class="form-check">
                 <div class="col-sm-10">
-                    <input class="form-check-input" type="checkbox" value="Room Service" id="service" name="service">
+                    <input class="form-check-input" type="checkbox" value="Room Service" id="service" name="service[]">
                     <label class="form-check-label" for="defaultCheck1">Room Service</label>
                 </div>
                 </div>
                 <div class="form-check">
                 <div class="col-sm-10">
-                    <input class="form-check-input" type="checkbox" value="Breakfast" id="service" name="service">
+                    <input class="form-check-input" type="checkbox" value="Breakfast" id="service" name="service[]">
                     <label class="form-check-label" for="defaultCheck2">Breakfast</label>
                 </div>
                 </div>
@@ -82,8 +81,26 @@
                 </div>
             </form>
     </div>
-    <div class="col-sm-6 center" style="background-color: whitesmoke; ">
-    <img class="card-img-top" src="standar.jpg" alt="Card image cap" style="height: 25rem;">
+    <div class="col-sm-6 center" style="background-color: whitesmoke; padding-top:160px">
+    <?php 
+    $book = 'standard';
+     if(!empty($_GET['book'])) { 
+        $book= $_GET['book']; 
+        $img='';
+     }
+          if($book == 'standard'){
+              $img = 'standar.jpg';
+            echo "<img src='".$img."'style='width:600px'>";
+          }elseif($book == 'superior'){
+            $img = 'luxury.jpg';
+            echo "<img src='".$img."'style='width:600px'>";
+          }elseif($book == 'luxury'){
+            $img = 'superior.jpg';
+            echo "<img src='".$img."'style='width:600px'>";
+          }else{
+        }
+        ?>
+
     </div>
 
     </body>
