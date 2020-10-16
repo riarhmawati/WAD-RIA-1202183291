@@ -77,7 +77,7 @@
                 </div>
                 </div>
                 <div class="col-sm-10">
-                    <button type = "submit" class="btn btn-block btn-primary"> Book </button>
+                    <button type = "reset" class="btn btn-block btn-primary"> Book </button>
                 </div>
             </form>
     </div>
