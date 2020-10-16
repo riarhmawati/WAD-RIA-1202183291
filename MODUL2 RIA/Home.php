@@ -39,7 +39,7 @@
           </div>
           <div class="card-footer">
           <div class="row justify-content-center">
-            <form action="" method="get">
+            <form action="Booking.php" method="get">
             <button type="submit" name="book" value="standard" class="btn btn-primary">Book now</button>
             </form>
 
@@ -64,7 +64,7 @@
           </div>
           <div class="card-footer">
           <div class="row justify-content-center">
-            <form action="" method="get">
+            <form action="Booking.php" method="get">
             <button type="submit" name="book" value="superior" class="btn btn-primary">Book now </button>
             </form>
 
@@ -91,7 +91,7 @@
           </div>
           <div class="card-footer ">
           <div class="row justify-content-center">
-            <form action="" method="get">
+            <form action="Booking.php" method="get">
             <button type="submit" name="book" value="luxury" class="btn btn-primary">Book now</button>
             </form>
 

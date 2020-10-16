@@ -20,16 +20,16 @@
         </header>
         <?php
 
-  $date = $GET['date'];
-  $checkout = date('Y-m-d', strtotime($date. ' + ' . $GET['duration'] . 'days'));
+  $date = $_POST['date'];
+  $checkout = date('Y-m-d', strtotime($date. ' + ' . $_POST['duration'] . 'days'));
 
         $totalprice = 0;
-        if ($GET["room"] == "Standard") {
-            $totalprice += 90 * $GET['duration'];
-        } else if ($GET["room"] == "Superior") {
-            $totalprice += 150 * $GET['duration'];
-        } else if ($GET["room"] == "Luxury") {
-            $totalprice += 200 * $GET['duration'];
+        if ($_POST["room"] == "Standard") {
+            $totalprice += 90 * $_POST['duration'];
+        } else if ($_POST["room"] == "Superior") {
+            $totalprice += 150 * $_POST['duration'];
+        } else if ($_POST["room"] == "Luxury") {
+            $totalprice += 200 * $_POST['duration'];
         }
         ?>
     <div class="container-sm" style="padding-top: 30px;">
@@ -49,16 +49,16 @@
                 <tbody>
                 <tr>
                     <td><?=(rand(10,100));?></td>
-                    <td><?=$GET['nama'];?></td>
-                    <td><?=$GET['date'];?></td>
+                    <td><?=$_POST['nama'];?></td>
+                    <td><?=$_POST['date'];?></td>
                     <td><?=$checkout;?></td>
-                    <td><?=$GET['room'];?></td>
-                    <td><?=$GET['phone'];?></td>
+                    <td><?=$_POST['room'];?></td>
+                    <td><?=$_POST['phone'];?></td>
                     <td class="text-left">
 
                     <?php 
-                      if(!empty($GET['service'])) {
-                          foreach($GET['service'] as $value){
+                      if(!empty($_POST['service'])) {
+                          foreach($_POST['service'] as $value){
                               echo '<li>' . $value.'</li>';
                               $totalprice += 20;
                           }
