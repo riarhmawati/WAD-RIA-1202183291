@@ -102,12 +102,12 @@
 
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <input type="text" class="form-control" id="name" name="name" value="<?= $event["name"] ?>">
                 </div>
 
                 <div class="form-group md-outline input-with-post-icon datepicker">
                     <label for="deskripsi">Deskripsi</label>
-                    <textarea class="form-control" id="deskripsi" rows="3" name="deskripsi"></textarea>
+                    <textarea class="form-control" id="deskripsi" rows="3" name="deskripsi"><?= $event["deskripsi"] ?></textarea>
                 </div>
 
                 <div class="form-group">
@@ -118,6 +118,7 @@
                     <label class="custom-file-label" for="gambar">Choose file</label>
                     </div>
                 </div>
+// karena text area, ga ada atribut <textarea> ... </textarea>
 
                 <div class="form-group ">
                 <legend class="col-form-label ">Kategori</legend>
@@ -142,28 +143,28 @@
             
                 <div class="form-group md-outline input-with-post-icon datepicker">        
                     <label for="tanggal">Tanggal</label>
-                    <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="yyyy/mm/dd">  
+                    <input type="date" class="form-control" id="tanggal" name="tanggal" value=" <?= $event["tanggal"] ?>" >  
                 </div>
 
                 <div class="form-row align-items-center">
                     <div class="form-group col-md-6"> 
                         <label for="mulai">Jam Mulai</label>
-                        <input type="time" id="mulai" class="form-control" name="mulai">
+                        <input type="time" id="mulai" class="form-control" name="mulai" value="<?= $event["mulai"] ?>">
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="berakhir">Jam Berakhir</label>
-                        <input type="time" id="berakhir" class="form-control" name="berakhir">
+                        <input type="time" id="berakhir" class="form-control" name="berakhir" value="<?= $event["berakhir"] ?>">
                     </div>
                 </div>
                 
                 <div class="form-group">
                     <label for="tempat">Tempat</label>
-                    <input type="text" class="form-control" id="tempat" name="tempat">
+                    <input type="text" class="form-control" id="tempat" name="tempat" value="<?= $event["tempat"] ?>">
                 </div>
                 <div class="form-group">
                     <label for="harga">Harga</label>
-                    <input type="text" class="form-control" id="harga" name="harga">
+                    <input type="text" class="form-control" id="harga" name="harga" value="<?= $event["harga"] ?>">
                 </div>
                 <legend class="col-form-label ">Benefit</legend>
                 <div class="form-check form-check-inline">
@@ -182,9 +183,7 @@
                 </div>
 
                 <div class="input-left" >
-                <a href="./Detail_Event.php">
-                    <button class="btn btn-danger " style="float: right" name="cancel">cancel</button>
-                    </a>
+                    <button class="btn btn-danger " data-dismiss="modal" style="float: right" name="cancel">cancel</button>
                     <button type="submit" class="btn btn-primary " style="float: right" name="submit">save changes</button>
                    
                 </div>
@@ -197,11 +196,7 @@
                         </form>
                     </div>
       
-                    <div class="modal-footer">
-        
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+                   
                 </div>
                
             </div>
