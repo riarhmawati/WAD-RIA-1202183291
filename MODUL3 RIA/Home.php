@@ -27,6 +27,10 @@
                 </div>
             </nav>
         </header>
+
+          <div class="container mt-5" style="margin-top:30px;">
+        <h2 class="text-center" style="color: DodgerBlue;">WELCOME TO EAD EVENTS!</h2>
+        <div class="row">
         <?php
 
 include ('config.php');
@@ -37,10 +41,6 @@ while ($selects = mysqli_fetch_assoc($select)) {
 $empty = false;
 
     ?>
-          <div class="container mt-5" style="margin-top:30px;">
-        <h2 class="text-center" style="color: DodgerBlue;">WELCOME TO EAD EVENTS!</h2>
-        <div class="row">
-       
             <div class="card-columns cpl col-10">
                 <div class="card">
                     <img class="card-img-top" src="gambar/<?= $selects['gambar']; ?>">

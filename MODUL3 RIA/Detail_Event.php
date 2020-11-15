@@ -182,10 +182,10 @@
                 </div>
 
                 <div class="input-left" >
-                <a href="./Buat_Event.php">
+                <a href="./Detail_Event.php">
                     <button class="btn btn-danger " style="float: right" name="cancel">cancel</button>
                     </a>
-                    <button type="submit" class="btn btn-primary " style="float: right" name="submit">submit</button>
+                    <button type="submit" class="btn btn-primary " style="float: right" name="submit">save changes</button>
                    
                 </div>
 
