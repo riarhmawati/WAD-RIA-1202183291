@@ -1,5 +1,5 @@
 <?php
-include ("config.php");
+include ("");
 
 $name = $_POST['name'];
 $deskripsi = $_POST['deskripsi'];
