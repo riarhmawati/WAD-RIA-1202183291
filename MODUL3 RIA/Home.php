@@ -34,7 +34,7 @@
         <?php
 
 include ('config.php');
-$query = "";
+$query = "SELECT * FROM event";
 $select = mysqli_query($conn, $query);
 $empty = true;
 while ($selects = mysqli_fetch_assoc($select)) {
