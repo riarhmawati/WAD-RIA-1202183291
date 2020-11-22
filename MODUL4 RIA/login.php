@@ -15,7 +15,7 @@
     <title>Login</title>
 </head>
 
-<body>
+<body style="background-color: beige;">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <ul class="navbar-nav ">
@@ -90,7 +90,7 @@
 
 
                 echo "<div class='alert alert-warning' role='alert'>
-                <strong>Berhasil registrasi</strong>
+                <strong>Berhasil Login</strong>
               </div>";
                 header("refresh:1; url=index.php");
 

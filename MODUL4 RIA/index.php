@@ -34,9 +34,7 @@ include("config.php");
                 <a href="cart.php">
                     <img src="gambar/keranjang.png" width="20" height="20" alt="no img" class="mr-3">
                 </a>
-
                 <label for="">Selamat Datang, </label>
-
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?= $_SESSION['nama']; ?>

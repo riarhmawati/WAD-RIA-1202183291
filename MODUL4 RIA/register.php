@@ -15,7 +15,7 @@
   <title>Register</title>
 </head>
 
-<body>
+<body style="background-color: beige;">
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <ul class="navbar-nav ">
@@ -53,27 +53,27 @@
             <h3 align="center"><span class="glyphicon glyphicon-home"></span> Register</h3>
             <div class="form-group" align="left">
               <label for="nama">Nama</label>
-              <input class="form-control" type="text" name="nama" id="nama" required>
+              <input class="form-control" type="text" name="nama" id="nama" placeholder="Masukkan Nama Lengkap" required>
             </div>
             <div class="form-group" align="left">
               <label for="email">E-mail</label>
-              <input class="form-control" type="email" name="email" id="email" required>
+              <input class="form-control" type="email" name="email" id="email" placeholder="Masukkan Alamat E-mail" required>
             </div>
             <div class="form-group" align="left">
               <label for="nohp">No. Handphone</label>
-              <input class="form-control" type="text" name="no_hp" id="no_hp" required>
+              <input class="form-control" type="text" name="no_hp" id="no_hp" placeholder="Masukkan Nomor Handphone" required>
             </div>
             <div class="form-group" align="left">
               <label for="password">Kata Sandi</label>
-              <input class="form-control" type="password" name="password" id="password" required>
+              <input class="form-control" type="password" name="password" id="password" placeholder="Buat Kata Sandi" required>
             </div>
             <div class=form-group align="left">
               <label for="password2">Konfirmasi Kata Sandi</label>
-              <input class="form-control" type="password" name="password2" id="password2" required>
+              <input class="form-control" type="password" name="password2" id="password2" placeholder="Konfirmasi Kata Sandi" required>
             </div>
             <button type="submit" class="btn btn-primary" name="register"> Submit</button>
             <p>Sudah punya akun? <a href="login.php">Login</a></p>
-            <p class="mt-5 mb-3 text-muted" align-center>&copy; 2020 Copyright: <a href="index.php">WAD Beauty </p>
+            <p class="mt-4 mb-3 text-muted" align-center>&copy; 2020 Copyright: <a href="index.php">WAD Beauty </p>
           </div>
 
         </div>

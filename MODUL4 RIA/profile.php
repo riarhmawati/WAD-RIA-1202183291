@@ -9,7 +9,7 @@ if (!isset($_SESSION['login'])) {
     header('location:login.php');
   }
 }
-
+$warnanavbar = isset($_COOKIE['warnanavbar']) ? $_COOKIE['warnanavbar'] : 'light';
 
 $id = $_SESSION['user_id'];
 $result = mysqli_query($conn, "SELECT * FROM user WHERE id='$id'");
@@ -21,9 +21,7 @@ if (isset($_POST["submit"])) {
   $no_hp = $_POST["no_hp"];
   $password = "";
   $password2 = "";
-  
-  
-  
+
   if (!empty($_POST["password"]) && !empty($_POST["password2"])) {
     if ($_POST["password"] === $_POST["password2"]) {
       $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
@@ -65,8 +63,8 @@ $user = mysqli_fetch_assoc($result);
 
 <body>
   <header>
-  
-    <nav class="navbar bg-light">
+
+    <nav class="navbar navbar-<?= warnanavbar ?> bg-<?= warnanavbar ?>">
       <a class="navbar-brand text-dark" href="index.php">WAD Beauty</a>
       <div class="form-inline">
         <a href="cart.php">
@@ -86,7 +84,7 @@ $user = mysqli_fetch_assoc($result);
         </div>
       </div>
     </nav>
-   
+
   </header>
   <div class="container" align="center">
     <div align="center" style="width:900px;margin-top:2%;">
@@ -128,6 +126,7 @@ $user = mysqli_fetch_assoc($result);
 
           <div class="col-sm-10">
             <select id="warnanavbar" name="warnanavbar">
+
               <option value="light">Light</option>
               <option value="dark">Dark</option>
             </select>
@@ -140,7 +139,9 @@ $user = mysqli_fetch_assoc($result);
     </div>
 
   </div>
-  <p class="mt-5 mb-3 text-muted" align-center>&copy; 2020 Copyright: <a href="index.php">WAD Beauty </p>
+  <div class="p-4 text-center">
+    <p class="mt-3 mb-3 text-muted" align-center>&copy; 2020 Copyright: <a href="index.php">WAD Beauty </p>
+  </div>
 </body>
 
 </html>

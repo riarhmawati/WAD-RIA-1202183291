@@ -48,7 +48,6 @@ if (!isset($_SESSION["is_login"])) {
         </nav>
     </header>
     <?php $user_id = $_SESSION['user_id'];
-
     if (isset($_POST["submit"])) {
         $id = $_POST["id"];
         mysqli_query($conn, "DELETE FROM cart WHERE id='$id'");
@@ -59,7 +58,7 @@ if (!isset($_SESSION["is_login"])) {
     }
     $daftar_barang = mysqli_query($conn, "SELECT * FROM cart WHERE user_id='$user_id'");
     ?>
-    <div class="container mt-3">
+    <div class="container p-4">
         <div class="row">
             <div class="table-responsive">
                 <table class="table table-striped table-bordered">
@@ -95,8 +94,9 @@ if (!isset($_SESSION["is_login"])) {
                         </tr>
                     </tbody>
                 </table>
-
-                <p class="mt-5 mb-3 text-muted" align-center>&copy; 2020 Copyright: <a href="index.php">WAD Beauty </p>
+                <div class="p-4 text-center">
+                <p class="mt-4 mb-3 text-muted" align-center>&copy; 2020 Copyright: <a href="index.php">WAD Beauty </p>
+                </div>
             </div>
         </div>
     </div>
