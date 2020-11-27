@@ -1,6 +1,6 @@
 <?php
 
-session_end();
+session_start();
 include("config.php");
 if (!isset($_SESSION["is_login"])) {
     header("location: login.php");

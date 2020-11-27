@@ -38,9 +38,9 @@
     if (isset($_SESSION['is_login'])) {
         header('location:index.php');
     }
-    if (isset($COOKIES['id']) && isset($COOKIES['key'])) {
-        $id = $COOKIES['id'];
-        $key = $COOKIES['key'];
+    if (isset($_COOKIE['id']) && isset($_COOKIE['key'])) {
+        $id = $_COOKIE['id'];
+        $key = $_COOKIE['key'];
 
         //ambil email berdasarkan id
         $result = mysqli_query($conn, "SELECT email FROM user WHERE id = $id");

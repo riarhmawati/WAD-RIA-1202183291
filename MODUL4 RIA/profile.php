@@ -14,7 +14,7 @@ if (!isset($_SESSION['is_login'])) {
 }
 $warnanavbar = isset($_COOKIE['warnanavbar']) ? $_COOKIE['warnanavbar'] : 'light';
 
-$id = $sesion[''];
+$id = $_SESSION['user_id'];
 $result = mysqli_query($conn, "SELECT * FROM user WHERE id='$id'");
 $user = mysqli_fetch_assoc($result);
 $alert = "";
