@@ -2,16 +2,19 @@
 session_start();
 require 'config.php';
 
-if (!isset($_SESSION['login'])) {
+// bukan debugging, saran ajaa
+// aku tambahin tanda seru
+if (!isset($_SESSION['is_login'])) {
   header("Location: login.php");
   exit;
-  if (!isset($_SESSION['is_login'])) {
-    header('location:login.php');
-  }
+  // ini ngga perlu
+  // if (!isset($_SESSION['is_login'])) {
+  //   header('location:login.php');
+  // }
 }
 $warnanavbar = isset($_COOKIE['warnanavbar']) ? $_COOKIE['warnanavbar'] : 'light';
 
-$id = $_SESSION['user_id'];
+$id = $sesion[''];
 $result = mysqli_query($conn, "SELECT * FROM user WHERE id='$id'");
 $user = mysqli_fetch_assoc($result);
 $alert = "";
@@ -64,7 +67,7 @@ $user = mysqli_fetch_assoc($result);
 <body>
   <header>
 
-    <nav class="navbar navbar-<?= warnanavbar ?> bg-<?= warnanavbar ?>">
+    <nav class="navbar navbar-<?= $warnanavbar ?> bg-<?= $warnanavbar ?>">
       <a class="navbar-brand text-dark" href="index.php">WAD Beauty</a>
       <div class="form-inline">
         <a href="cart.php">
@@ -78,7 +81,7 @@ $user = mysqli_fetch_assoc($result);
             <?= $_SESSION['nama']; ?>
           </a>
           <div class="dropdown-menu ml-auto" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="./profile.php?id=<?= $_SESSION['id']; ?>">Profile</a>
+            <a class="dropdown-item" href="profile.php?id=<?= $_SESSION['id']; ?>">Profile</a>
             <a class="dropdown-item" href="logout.php">Logout</a>
           </div>
         </div>

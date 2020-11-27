@@ -40,7 +40,7 @@ include("config.php");
                         <?= $_SESSION['nama']; ?>
                     </a>
                     <div class="dropdown-menu ml-auto" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="./profile.php ">Profile</a>
+                        <a class="dropdown-item" href="profile.php ">Profile</a>
                         <a class="dropdown-item" href="logout.php">Logout</a>
                     </div>
                 </div>
