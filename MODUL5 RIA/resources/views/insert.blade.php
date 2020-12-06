@@ -26,7 +26,6 @@
                             <input type="text" class="form-control" id="inlineFormInputGroup" name="price">
                         </div>
 
-
                         <div class="form-group">
 
                             <label for="description">Description</label>

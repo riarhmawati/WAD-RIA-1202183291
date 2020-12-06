@@ -25,11 +25,8 @@ class BeliController extends Controller
     }
     public function prosesorder($id)
     {
-        DB::table('products')
-            ->where('id', $id);
-
-
-        return view('prosesorder');
+        $products = DB::table('products')->get();
+        return view('prosesorder', compact('products'));
     }
     public function store(Request $request)
     {
@@ -39,6 +36,6 @@ class BeliController extends Controller
         $order->amount = $request->amount;
         $order->product_id =  $request->product_id;
         $order->save();
-        return redirect()->route('product.index');
+        return redirect()->route('history');
     }
 }

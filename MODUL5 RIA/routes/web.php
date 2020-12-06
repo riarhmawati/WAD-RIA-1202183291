@@ -25,7 +25,7 @@ Route::get('/order', 'App\Http\Controllers\BeliController@order')->name('order')
 Route::get('/history', 'App\Http\Controllers\BeliController@history')->name('history');
 Route::get('/insert', 'App\Http\Controllers\OrderController@insert')->name('insert');
 
-Route::get('/update', 'App\Http\Controllers\OrderController@update')->name('update');
+Route::post('/update', 'App\Http\Controllers\OrderController@update')->name('update');
 
 Route::post('/storeproduct', 'App\Http\Controllers\OrderController@storeproduct')->name('storeproduct');
 Route::get('/product', [OrderController::class, 'product'])->name('product');
