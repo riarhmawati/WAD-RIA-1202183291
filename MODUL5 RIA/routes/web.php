@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/home', 'App\Http\Controllers\OrderController@home')->name('home');
 // Route::get('/product', 'App\Http\Controllers\OrderController@product')->name('product');
 Route::get('/order', 'App\Http\Controllers\BeliController@order')->name('order');
-Route::get('/history', 'App\Http\Controllers\BeliController@history')->name('history');
+Route::get('/', 'App\Http\Controllers\BeliController@history')->name('history');
 Route::get('/insert', 'App\Http\Controllers\OrderController@insert')->name('insert');
 
 Route::post('/update', 'App\Http\Controllers\OrderController@update')->name('update');

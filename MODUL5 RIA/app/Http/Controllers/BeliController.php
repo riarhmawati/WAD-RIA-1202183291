@@ -31,10 +31,10 @@ class BeliController extends Controller
     public function store(Request $request)
     {
         $order = new Order();
-        $order->buyer_name = $request->buyer_name;
-        $order->buyer_contact = $request->buyer_contact;
-        $order->amount = $request->amount;
-        $order->product_id =  $request->product_id;
+        $order-> = $request->buyer_name;
+        $order-> = $request->buyer_contact;
+        $order-> = $request->amount;
+        $order-> =  $request->product_id;
         $order->save();
         return redirect()->route('history');
     }
