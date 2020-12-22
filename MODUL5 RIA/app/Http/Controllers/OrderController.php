@@ -16,7 +16,7 @@ class OrderController extends Controller
     public function product()
     {
         $products = DB::table('products')->get();
-        return view('', compact('products'));
+        return view('product', compact('products'));
     }
 
 
